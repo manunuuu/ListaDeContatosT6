@@ -42,7 +42,7 @@ namespace ListaDeContatosT6
             }
             set
             {
-                if (value.Length == 13)
+                if (value.Length == 11)
                 {
                    
                     telefone = value;
@@ -66,14 +66,14 @@ namespace ListaDeContatosT6
             Sobrenome = sobrenome;
             Telefone = telefone;
         }
-        public override string.ToString()
+        public override string ToString()
         {
             string saida = string.Empty;
             saida += string.Format("{0} {1} ", Nome, Sobrenome);
             saida += string.Format("{0} {1}-{2} ",
                 Telefone.Substring(0, 2),
-                Telefone.Substring(3, 5),
-                Telefone).Substring(7,4));
+                Telefone.Substring(2, 5),
+                Telefone.Substring(7,4));
             return saida;
         }
     }
